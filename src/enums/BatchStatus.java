@@ -1,5 +1,7 @@
 package enums;
 
-public class BatchStatus {
-    
+public enum BatchStatus {
+    SCHEDULED,
+    RACING,
+    COMPLETED
 }

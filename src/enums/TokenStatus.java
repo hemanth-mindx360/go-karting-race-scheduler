@@ -1,5 +1,9 @@
 package enums;
 
-public class TokenStatus {
-    
+public enum TokenStatus {
+    WAITING,
+    SCHEDULED,
+    RACING,
+    COMPLETED,
+    CANCELLED
 }
