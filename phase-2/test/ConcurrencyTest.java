@@ -46,6 +46,16 @@ public class ConcurrencyTest {
             throw new AssertionError("Race history and revenue are inconsistent");
         }
         arena.shutdown();
+
+        ArenaService expiryArena = new ArenaService(0, 30);
+        Customer expiryCustomer = expiryArena.registerCustomer(
+                "expiry", "test", "Expiry Test");
+        expiryArena.book(expiryCustomer, 1, 5, KartType.SINGLE);
+        Thread.sleep(10);
+        if (expiryArena.expireWaitingTokens() != 1) {
+            throw new AssertionError("Waiting token was not expired");
+        }
+        expiryArena.shutdown();
         System.out.println("Concurrency test passed for " + race.getBatchId());
     }
 }
