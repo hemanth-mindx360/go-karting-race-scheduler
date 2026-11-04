@@ -239,7 +239,7 @@ you want to run.
 
 ## Collaboration and Git workflow
 
-The stable branch is `main`. Work should be developed on personal branches and
+The stable branch is `main`. work should be developed on personal branches and
 merged through Pull Requests:
 
 ```text
