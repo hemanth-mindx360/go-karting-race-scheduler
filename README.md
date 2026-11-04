@@ -1,24 +1,9 @@
 # FNF Karting Arena
 
-Simple Java console application for Phase 1 karting bookings and race
-scheduling.
+This repository contains two isolated Java console applications:
 
-## Run
+- [Phase 1](./phase-1/README.md): the completed karting booking and race scheduling application.
+- [Phase 2](./phase-2/README.md): the separate application scaffold for the next phase.
 
-Open PowerShell in the project folder and run:
-
-```powershell
-New-Item -ItemType Directory -Force out
-javac -d out (Get-ChildItem -Recurse -Filter *.java src | ForEach-Object FullName)
-java -cp out console.Main
-```
-
-Admin login:
-
-```text
-Username: admin
-Password: admin
-```
-
-The application supports customer registration, bookings, race batches,
-cancellation, race history, and earnings.
+Each phase has its own source code, tests, build output, and README. They can
+be developed and run independently.
